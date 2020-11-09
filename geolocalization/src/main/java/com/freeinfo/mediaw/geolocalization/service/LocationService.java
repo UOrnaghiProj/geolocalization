@@ -7,8 +7,11 @@ import org.springframework.stereotype.Service;
 import com.freeinfo.mediaw.geolocalization.connector.OpenCageDatqaFeignClient;
 import com.freeinfo.mediaw.geolocalization.model.Location;
 
+import lombok.extern.slf4j.Slf4j;
+
 
 @Service
+@Slf4j
 public class LocationService {
 	
 	private String nazione;
@@ -28,6 +31,7 @@ public class LocationService {
 	
 	
 	public Location retriveLocation(String location) {
+		log.info("***** Ricerca della location: " + location);
 		return feignClient.searchLocationByName(location, nazione, token);
 	}
 
