@@ -1,0 +1,12 @@
+server:
+  port: 5002
+  
+# ==============================================================
+# = Proprietà varie custom
+# ============================================================== 
+
+client:
+  opencagedata:
+    base_url : https://api.opencagedata.com/geocode/v1/json
+    token: a337393afafc42e8a36dd548a94b7008
+    nazione: it
