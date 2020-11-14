@@ -29,13 +29,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
-		<!-- Eureka Client -->
-		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		    <version>2.2.5.RELEASE</version>
-		</dependency>
-		
 		<!-- BOOTSTRAP -->
 		<dependency>
 		    <groupId>org.webjars</groupId>

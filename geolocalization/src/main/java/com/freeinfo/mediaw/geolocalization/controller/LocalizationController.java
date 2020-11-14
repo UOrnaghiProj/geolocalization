@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.freeinfo.mediaw.geolocalization.exception.OpencagedataException;
 import com.freeinfo.mediaw.geolocalization.model.Location;
 import com.freeinfo.mediaw.geolocalization.service.LocationService;
 
@@ -19,7 +20,7 @@ public class LocalizationController {
 	private LocationService locationService;
 	
 	@GetMapping(value = "/location/{location}")
-	public ResponseEntity<Location> getLocation(@PathVariable("location") String location){
+	public ResponseEntity<Location> getLocation(@PathVariable("location") String location) throws OpencagedataException{
 		return new ResponseEntity<Location>(locationService.retriveLocation(location),HttpStatus.OK);
 	}
 
